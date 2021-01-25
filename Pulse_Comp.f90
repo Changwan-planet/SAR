@@ -29,6 +29,9 @@ REAL*8, DIMENSION(-k:k) :: time
 REAL*8  :: t_0 = 35.2d-6                    ![s] Pulse length
 REAL*8  :: t_0_2
 
+REAL*8 ::  local_os                         !Local oscillator
+
+
 
 INTEGER :: i,j
 
@@ -102,4 +105,7 @@ DO  t =  -k,k,1
 END DO
 
 
+DO t = -k,k,1
+   
+     local_os = 2 * cos(2*pi*f_*(t_0_2*(t/k2))
 END PROGRAM
